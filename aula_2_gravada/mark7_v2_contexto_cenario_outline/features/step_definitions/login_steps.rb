@@ -1,5 +1,5 @@
 Dado("que acessei a página de Login") do
-  visit 'https://mark7.herokuapp.com/login'
+  visit '/login'
 end
 
 Quando("faço login com {string} e {string}") do |email, senha|
@@ -23,6 +23,7 @@ Então("sou autenticado com sucesso") do
 end
 
 Então("sou redirecionado para o painel de tarefas com a mensagem {string}") do |mensagem_ola|
+  #reduz o escopo da validação ao selecionar um pedaço do html e pesquisar o conteúdo dentro desse subset
   task_board = find("#task-board")
   expect(task_board).to have_content mensagem_ola
 end

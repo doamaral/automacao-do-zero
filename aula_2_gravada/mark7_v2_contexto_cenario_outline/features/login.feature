@@ -11,7 +11,7 @@ Funcionalidade: Autenticação de usuário
     #A tag @logout está sendo utilizada para executar um Hook associado a ela
     @Ready @Sucesso @logout
     Cenário: Login de usuário
-        Quando faço login com "lopesdoamaral@gmail.com" e "asdfgh"
+        Quando faço login com "lopesdoamaral@gmail.com" e "123123"
         Então sou autenticado com sucesso
         E sou redirecionado para o painel de tarefas com a mensagem "Olá, Lucas Amaral"
 
@@ -24,7 +24,7 @@ Funcionalidade: Autenticação de usuário
         
         Exemplos:
             | email                   | senha   | mensagem                    |
-            | lopesdoamaral@gmail.com | asdfg   | Senha inválida.             |
+            | lopesdoamaral@gmail.com | asdfg | Senha deve ter no mínimo 6 caracteres. |
             | asdfgh@gmail.com        | asdfgh  | Usuário não cadastrado.     |
             | asdfghgmail.com         | asdfgh  | Email incorreto ou ausente. |
             |                         |         | Email incorreto ou ausente. |

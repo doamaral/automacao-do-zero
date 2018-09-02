@@ -1,10 +1,13 @@
 # Projeto Mark7
-## Gerenciador de Tarefas
 
-##Features
-* Login
-* Cadastro de usuários
-* CRUD de tarefas
-* Troca de Senha
-* Minha Conta (atualização cadastral)
-* Finalizar tarefa
+## Versão 2:
+* Arquivo login.feature
+    * Os Steps que se repetem foram colocados em um "Contexto"
+    * Uso do Esquema de Cenário (Scenario Outline) + Exemplos
+* Arquivo hooks.rb
+    * hooks são ações/métodos que podem acontecer antes ou depois de cada cenário ou de acordo com uma tag definida
+* Arquivo login_steps.rb
+    * Acessar uma página: **visit(_URL_)**
+    * Seletor: **find("_seletor css_")**
+    * Ação para preencher uma campo de input: **.set** x. Atribui valor a um Elemento retornado pelo **_find_**
+    
