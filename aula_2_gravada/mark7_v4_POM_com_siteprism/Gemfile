@@ -1,0 +1,19 @@
+source "https://rubygems.org"
+
+#Cucumber is a Framework for testing other software.
+#It runs automated acceptance tests written in a behavior-driven development (BDD) style
+#https://cucumber.io
+gem 'cucumber'
+
+#RSpec is a 'Domain Specific Language' (DSL) testing tool written in Ruby to test Ruby code http://relishapp.com/rspec/rspec-rails
+gem 'rspec'
+
+#Capybara is a library written in the Ruby programming language which makes it easy to simulate how a user interacts with your application.
+gem 'selenium-webdriver'
+
+#Acceptance test framework for web applications http://teamcapybara.github.io/capybara/
+gem 'capybara'
+
+#POM
+gem 'site_prism'
+

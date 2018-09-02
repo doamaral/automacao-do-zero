@@ -1,0 +1,29 @@
+#BDD
+    + Uma só Doc: Caso de Uso + Plano de Testes + Massa de Dados
+        - Dev lê pra Programar
+        - QA lê para testar (ou automatizar se for o caso)
+    + BDD não está intrinsecamente associado ao Ágil, pode ser usado em ágil e cascata
+    + BDD de Software legados: fazer BDD das novas features
+    + Especificações baseadas em Cenários, Especificação por exemplo
+    + Usa o Modelo "Dado, Quando, Então" para descrever os exemplos (Plano de Testes + Massa de Dados)
+
+#Cucumber
+    + Dá vida a Especificação
+    + Automatiza Especificações
+
+#Ruby
+    + gem install bundler
+    + bundle init
+        - cria o Gemfile
+        - coloca no Gemfile gem 'cucumber' para rodar o cucumber
+        - coloca no Gemfile gem 'rspec' para fazer Assertions no Gemfile
+    + bundle install
+        - instala todas as gems que estão no Gemfile
+        - add o cucumber ao projeto
+        - testa instalação com o cucumber --version
+    + cucumber --init
+        - cria a estrutura, folder "feature" e sub pasta "steps_definitions"
+            - na raiz de "features" ficam os arquivos ".feature"
+            - em "steps_definitions" ficam os códigos Ruby que implementam a automação dos steps definidos na feature
+    + cucumber [-t @task1]
+        - cucumber -t @task1, @task2
