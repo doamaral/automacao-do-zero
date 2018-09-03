@@ -10,6 +10,7 @@
 * Finalizar tarefa
 
 ## Versão 1
+* cucumber --init
 * Arquivo login.feature
     * .feature criados para a aplicação Mark7
     * Os cenários foram reescritos para focar na necessidade de negócio, em vez do passo a passo de um caso de teste convencional

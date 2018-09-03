@@ -3,6 +3,7 @@ Before do
     @tarefas_page = TarefasPage.new
     @side = Sidebar.new
     @logout = Navbar.new
+    @perfil_page = MeuPerfil.new
 end
 
 Before('@jalogado') do
