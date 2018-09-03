@@ -10,4 +10,6 @@
     * Acessar uma página: **visit(_URL_)**
     * Seletor: **find("_seletor css_")**
     * Ação para preencher uma campo de input: **.set** x. Atribui valor a um Elemento retornado pelo **_find_**
+* Arquivo env.rb
+	* foi adicionada uma nova configuração para a URL base do sistema: config.app_host = 'https://mark7.herokuapp.com'
     

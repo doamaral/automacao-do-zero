@@ -1,5 +1,5 @@
 Dado("que acessei a página de Login") do
-  visit 'https://mark7.herokuapp.com/login'
+  visit '/login'
 end
 
 Quando("faço login com {string} e {string}") do |email, senha|
