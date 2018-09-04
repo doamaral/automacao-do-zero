@@ -23,6 +23,6 @@ Dado("já possuo uma tarefa com esse nome") do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-Então("devo ver a seguinte mensagem {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Então("devo ver a seguinte mensagem {string}") do |mensagem|
+  expect(@adcionar_tarefa_page.mensagem_tentativa).to have_content mensagem
 end

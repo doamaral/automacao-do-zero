@@ -6,7 +6,7 @@ Funcionalidade: Cadastro de Tarefas
     Desejo cadastrar uma Tarefa
     Para não perder o rastreio das minhas atividades 
 
-    @smoke @DeleteTask @logout
+    @smoke @done @deletetask @logout
     Cenário: Cadastrar tarefas
         Dado que o nome da minha tarefa é "Fazer compras"
         E a data de finalização é "05/09/2018"
@@ -17,6 +17,7 @@ Funcionalidade: Cadastro de Tarefas
             |Banana|
         Quando cadastro essa tarefa
         Então devo ver a tarefa com status "Em andamento"
+    
     @logout
     Cenário: Tarefa não pode ser duplicada
         Dado que o nome da minha tarefa é "Ler um livro de MongoDB"
@@ -24,7 +25,8 @@ Funcionalidade: Cadastro de Tarefas
         Mas já possuo uma tarefa com esse nome
         Quando cadastro essa tarefa
         Então devo ver a seguinte mensagem "<mensagem>" 
-    @logout
+    
+    @Done @logout
     Esquema do Cenário: Tentativa de Cadastro de Tarefas
         Dado que o nome da minha tarefa é "<nome_tarefa>"
         E a data de finalização é "<data_tarefa>"
@@ -32,6 +34,6 @@ Funcionalidade: Cadastro de Tarefas
         Então devo ver a seguinte mensagem "<mensagem>"
 
             Exemplos:
-                | nome_tarefa | data_tarefa | mensagem |
-                | Ler  | 28/10/2018  | 10 caracteres é o mínimo permitido  |
-                |  | 28/10/2018  | Nome é obrigatório  |
+            | nome_tarefa | data_tarefa | mensagem                            |
+            | Ler         | 28/10/2018  | 10 caracteres é o mínimo permitido. |
+            |             | 28/10/2018  | Nome é obrigatório                  |

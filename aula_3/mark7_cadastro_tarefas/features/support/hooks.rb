@@ -16,6 +16,6 @@ After('@logout') do
     @logout.sair
 end
 
-After('@DeleteTask') do
+After('@deletetask') do
    @tarefas_page.remove_tarefa @nome_tarefa
 end

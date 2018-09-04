@@ -16,7 +16,7 @@ class TarefasPage
     end
 
     def busca_tarefa nome_tarefa
-       linha = find('#tasks tbody tr', text: nome_tarefa)
+       find('#tasks tbody tr', text: nome_tarefa)
     end
 
     def remove_tarefa nome_tarefa

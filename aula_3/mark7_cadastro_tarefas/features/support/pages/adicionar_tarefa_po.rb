@@ -8,4 +8,8 @@ class AdicionarTarefa
             click_button 'Cadastrar'
         end
     end
+
+    def mensagem_tentativa
+        find('.panel-body')
+    end
 end
