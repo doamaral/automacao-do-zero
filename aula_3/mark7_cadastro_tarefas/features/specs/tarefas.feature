@@ -6,7 +6,7 @@ Funcionalidade: Cadastro de Tarefas
     Desejo cadastrar uma Tarefa
     Para não perder o rastreio das minhas atividades 
 
-    @smoke @done @deletetask @logout
+    @smoke  @logout
     Cenário: Cadastrar tarefas
         Dado que o nome da minha tarefa é "Fazer compras"
         E a data de finalização é "05/09/2018"
@@ -18,15 +18,15 @@ Funcionalidade: Cadastro de Tarefas
         Quando cadastro essa tarefa
         Então devo ver a tarefa com status "Em andamento"
     
-    @logout
+    @logout @dup
     Cenário: Tarefa não pode ser duplicada
         Dado que o nome da minha tarefa é "Ler um livro de MongoDB"
         E a data de finalização é "05/09/2018"
         Mas já possuo uma tarefa com esse nome
         Quando cadastro essa tarefa
-        Então devo ver a seguinte mensagem "<mensagem>" 
+        Então devo ver a seguinte mensagem "Tarefa duplicada." 
     
-    @Done @logout
+    @logout
     Esquema do Cenário: Tentativa de Cadastro de Tarefas
         Dado que o nome da minha tarefa é "<nome_tarefa>"
         E a data de finalização é "<data_tarefa>"
