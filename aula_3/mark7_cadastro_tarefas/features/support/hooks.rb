@@ -21,5 +21,6 @@ end
 
 #Deletar uma tarefa após inclui-la
 After('@deletetask') do
-   @tarefas_page.remove_tarefa @nome_tarefa
+   @tarefas_page.solicita_remocao @nome_tarefa
+   @tarefas_page.confirma_remocao 'Sim'
 end

@@ -15,18 +15,22 @@ class TarefasPage
         find('#insert-button').click
     end
 
+    def busca_tarefas nome_tarefa
+       all('#tasks tbody tr', text: nome_tarefa)
+    end
+
     def busca_tarefa nome_tarefa
        find('#tasks tbody tr', text: nome_tarefa)
     end
 
-    def remove_tarefa nome_tarefa
-        linha = find('#tasks tbody tr', text: nome_tarefa)
-        within linha do
-            click_button 'Apagar'
-        end
+    def solicita_remocao nome_tarefa
+        busca_tarefa(nome_tarefa).find("#delete-button").click
+    end
 
+    def confirma_remocao resposta
         within '.modal-content' do
-            click_button 'Sim'
+            click_button resposta
         end
+        sleep 0.2
     end
 end

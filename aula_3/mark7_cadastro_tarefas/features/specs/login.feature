@@ -9,7 +9,7 @@ Funcionalidade: Autenticação de usuário
         Dado que acessei a página de Login
 
     #A tag @logout está sendo utilizada para executar um Hook associado a ela
-    @Ready @Sucesso @logout
+    @smoke @Sucesso @logout
     Cenário: Login de usuário
         Quando faço login com "lopesdoamaral@gmail.com" e "123123"
         Então sou autenticado com sucesso

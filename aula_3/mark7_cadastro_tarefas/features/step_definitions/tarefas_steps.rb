@@ -34,3 +34,34 @@ end
 Então("devo ver a seguinte mensagem {string}") do |mensagem|
     expect(@adcionar_tarefa_page.mensagem_tentativa).to have_content mensagem
 end
+
+Dado("que tenho uma tarefa indesejada") do
+    @nome_tarefa = "Tarefa Indesejada"
+    @data_tarefa = "19/09/2018"
+    # @tarefas_page.solicita_remocao @nome_tarefa
+    # @tarefas_page.confirma_remocao 'Sim'
+    @tarefas_page.adicionar
+    @adcionar_tarefa_page.cadastra_tarefas @nome_tarefa, @data_tarefa, @tags
+end
+
+Quando("solicito a exclusão da tarefa") do
+    @tarefas_page.solicita_remocao @nome_tarefa
+end
+
+Quando("confirmo a ação de exclusão") do
+    @tarefas_page.confirma_remocao 'Sim'
+end
+
+Então("essa tarefa não deve ser mais exibida") do
+    del = @tarefas_page.busca_tarefas @tarefa_a_deletar
+    expect(del.size).to equal 0
+end
+
+Quando("desisto da ação de exclusão") do
+    @tarefas_page.confirma_remocao 'Não, deixa queto.'
+end
+
+Então("essa tarefa permanece na lista de tarefas") do
+    del = @tarefas_page.busca_tarefas @tarefa_a_deletar
+    expect(del.size).to equal 1
+end
