@@ -9,7 +9,7 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
-log/
+aula_3/log/
 
 # Used by dotenv library to load environment variables.
 # .env
