@@ -24,3 +24,12 @@ After('@deletetask') do
    @tarefas_page.solicita_remocao @nome_tarefa
    @tarefas_page.confirma_remocao 'Sim'
 end
+
+After do |scenario|
+    nome = scenario.name.gsub(/[^A-Za-z0-9 ]/, "")
+    nome = nome.tr(" ", "_").downcase!
+    shot = "log/screenshots/#{nome}.png"
+
+    page.save_screenshot(shot)
+    embed(shot, 'image/png', "Evidência do Cenário: #{scenario.name}")
+end

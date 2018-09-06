@@ -1,2 +1,5 @@
 ---
-default: --format html --out=log/reports.html --format progress
+default: -p html --format progress
+ci: -p json --format progress
+html: --format html --out=log/reports.html
+json: --format json --out=log/reports.json
